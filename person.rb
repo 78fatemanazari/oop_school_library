@@ -1,14 +1,14 @@
 class Person
   attr_accessor :id, :name, :age
 
-  def initialize(id, age, name = 'Unknown', parent_permission = true)
+  def initialize(id, age, name = 'Unknown', parent_permission: true)
     @id = id
     @name = name
     @age = age
     @parent_permission = parent_permission
   end
 
-  def has_parent_permission?
+  def parent_permission?
     @parent_permission = true
   end
 
@@ -17,6 +17,7 @@ class Person
   end
 
   private
+
   def of_age?
     @age >= 18
   end

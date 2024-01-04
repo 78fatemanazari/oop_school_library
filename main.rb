@@ -2,27 +2,27 @@ require_relative 'person'
 require_relative 'student'
 require_relative 'teacher'
 
-#Person
-person_1 = Person.new(1, 24)
-puts person_1.id
-puts person_1.age
-puts person_1.name
-puts person_1.can_use_services?
+# Person
+person = Person.new(1, 24)
+puts person.id
+puts person.age
+puts person.name
+puts person.can_use_services?
 
-#Student
-student_1 = Student.new(1, 22, 'Math')
-puts student_1.id
-puts student_1.age
-puts student_1.name
-puts student_1.the_classroom
-puts student_1.play_hooky
+# Student
+student = Student.new(1, 22, 'Math')
+puts student.id
+puts student.age
+puts student.name
+puts student.the_classroom
+puts student.play_hooky
 
-#Teacher
-teacher_1 = Teacher.new(1, 32, 'Mathematic')
-puts teacher_1.id
-puts teacher_1.name
-puts teacher_1.age
-puts teacher_1.can_use_services?
+# Teacher
+teacher = Teacher.new(1, 32, 'Mathematic')
+puts teacher.id
+puts teacher.name
+puts teacher.age
+puts teacher.can_use_services?
 
 def welcome_message
   puts 'Welcome to School Library App!'
@@ -39,8 +39,8 @@ def menu_options
   puts '7 - Exit'
 end
 
-def get_user_input
-  gets.chomp()
+def the_user_input
+  gets.chomp
 end
 
 def handle_user_selection(user_input)
@@ -58,8 +58,8 @@ def handle_user_selection(user_input)
   end
 end
 
-def get_user_choice
-  gets.chomp()
+def the_user_choice
+  gets.chomp
 end
 
 def handle_user_input(user_choice)
@@ -82,16 +82,15 @@ def handle_user_input(user_choice)
 end
 
 def exit_program
-  puts "Good bye!"
+  puts 'Good bye!'
   exit
 end
 
 loop do
   welcome_message
   menu_options
-  user_input = get_user_input
+  user_input = the_user_input
   handle_user_selection(user_input)
-  user_choice = get_user_choice
+  user_choice = the_user_choice
   handle_user_input(user_choice)
 end
-
