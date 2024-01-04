@@ -1,6 +1,6 @@
 require_relative 'person'
- #require_relative 'student'
- #require_relative 'teacher'
+# require_relative 'student'
+# require_relative 'teacher'
 
 # Person
 # person = Person.new(1, 24)
@@ -9,7 +9,7 @@ require_relative 'person'
 # puts person.name
 # puts person.can_use_services?
 
-person = Person.new(22,'maximilianus')
+person = Person.new(22, 'maximilianus')
 puts person.correct_name
 
 capitalized_person = CapitalizeDecorator.new(person)
@@ -19,19 +19,19 @@ capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
 puts capitalized_trimmed_person.correct_name
 
 # Student
- #student = Student.new(1, 22, 'Math')
- #puts student.id
- #puts student.age
- #puts student.name
- #puts student.the_classroom
- #puts student.play_hooky
+# student = Student.new(1, 22, 'Math')
+# puts student.id
+# puts student.age
+# puts student.name
+# puts student.the_classroom
+# puts student.play_hooky
 
 # Teacher
- #teacher = Teacher.new(1, 32, 'Mathematic')
- #puts teacher.id
- #puts teacher.name
- #puts teacher.age
- #puts teacher.can_use_services?
+# teacher = Teacher.new(1, 32, 'Mathematic')
+# puts teacher.id
+# puts teacher.name
+# puts teacher.age
+# puts teacher.can_use_services?
 
 def welcome_message
   puts 'Welcome to School Library App!'
