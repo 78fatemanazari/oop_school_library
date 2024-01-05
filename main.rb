@@ -1,22 +1,3 @@
-require_relative 'person'
-require_relative 'student'
-require_relative 'teacher'
-
-# Persons
-
-person = Person.new(24)
-puts person.name
-puts person.age
-
-person = Person.new(24, 'maximilianus')
-puts person.correct_name
-capitalized_person = CapitalizeDecorator.new(person)
-puts capitalized_person.correct_name
-capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
-puts capitalized_trimmed_person.correct_name
-
-
-
 def welcome_message
   puts 'Welcome to School Library App!'
   puts 'Please choose an option by enterin a number: '
